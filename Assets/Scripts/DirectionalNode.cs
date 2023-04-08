@@ -25,17 +25,17 @@ public class DirectionalNode : MonoBehaviour
 
     void SwitchSprite()
     {
-        if(current == "left")
+        switch(current)
         {
-            sr.sprite = left;
-        }
-        else if(current == "right")
-        {
-            sr.sprite = right;
-        }
-        else
-        {
-            sr.sprite = none;
+            case "left":
+                sr.sprite = left;
+                break;
+            case "right":
+                sr.sprite = right;
+                break;
+            default:
+                sr.sprite = none;
+                break;
         }
     }
 }
